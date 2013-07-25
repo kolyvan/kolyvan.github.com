@@ -1,0 +1,37 @@
+---
+layout: kybook
+title: Support
+---
+
+<div class="hero-unit">
+	<h1>Support</h1>    
+	<p class="lead">Please read FAQ before report about a problem</p>	
+    <p>
+	<a href="#">Report a problem</a>
+    </p>
+</div>
+
+<div class="container-fluid">
+    
+    <div class="row-fluid">    
+    	
+    	<div class="span10">
+    
+		<h3 id="faq">FAQ</h3>
+
+		<ul>
+    	{% for post in site.categories.kybook %}
+    	{% if post.categories contains 'faq' %}
+      	<li> <a href="{{ post.url }}">{{ post.title }}</a> </li>
+      	{% endif %}
+    	{% endfor %}
+  		</ul>
+ 
+    	</div>
+
+		<div class="span2">    		
+    	</div>
+
+    </div>
+
+</div>

@@ -1,0 +1,57 @@
+---
+layout: kybook
+title: Media
+images:
+  - { file: sidebar_menu.png, title: Sidebar Menu }
+  - { file: bookshelf_covers.png, title: Bookshelf (Cover Flow) }
+  
+---
+
+<div class="hero-unit">
+    <h1>Media</h1>    
+    <p class="lead">Look at screenshots and videos</p>   
+    <p>
+    <a href="#">-</a>
+    </p>
+</div>
+
+<div class="container-fluid">
+    
+    <div class="row-fluid">    
+    	
+    	<div class="span10">
+    
+		<h3 id="screenshots">Screenshots</h3>
+
+        <ul class="thumbnails">
+
+        {% for image in page.images %}
+            
+            <li class="span3">
+            <div class="thumbnail"> 
+            <a href="{{ site.url }}/assets/kybook/images/{{ image.file }}" target="_blank" class="thumbnail">
+            <img src="{{ site.url }}/assets/kybook/thumbs/{{ image.file }}">
+            </a>
+            <p>{{image.title}}</p>
+            </div>
+            </li>   
+
+        {% endfor %}
+            
+        </ul>
+
+		<h3 id="videos">Videos</h3>
+ 
+    	</div>
+
+		<div class="span2">    
+		<ul class="nav nav-tabs nav-stacked">			
+			<li><a href="#screenshots">Screenshots</a></li>		
+			<li><a href="#videos">Videos</a></li>				
+		</ul>
+    	</div>
+
+    </div>
+
+</div>
+

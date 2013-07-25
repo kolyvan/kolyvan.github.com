@@ -1,57 +1,46 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+title: Kolyvan Site
+---
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="kolyvan.github.com : " />
+<div class="hero-unit">
+	<h1>kolyvan.com</h1>
+    <p class="lead">Welcome to Kolyvan page</p>	    
+</div>
+   
+<h2>Applications</h2>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<h3><a href='/kybook/news.html'>KyBook</a></h3>
+<h3><a href='/samizdat/main.html'>Самиздат</a></h3>
 
-    <title>kolyvan.github.com</title>
-  </head>
+<h2>Open-Source projects</h2>
 
-  <body>
+<div id="github-projects"></div>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/kolyvan">View on GitHub</a>
+<script type="text/javascript" charset="utf-8">
 
-          <h1 id="project_title">kolyvan.github.com</h1>
-          <h2 id="project_tagline"></h2>
+  $.githubUser('kolyvan', function(repos) {
+    $('#github-projects').html('');
 
-        </header>
-    </div>
+    //var repos = data.user.repositories;
+    repos.sort(function(a,b) {
+      return b.watchers - a.watchers;
+    });
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to Kolyvan page</h3>
+    $(repos).each(function() {
 
-<h2>My projects</h2>
+    	if (this.watchers_count > 0) {
 
-<ul>
-<li>
-<a href="https://github.com/kolyvan/iSamizdat">iSamizdat - iOS app for keep track of changes on samlib.ru </a> </li>
-<li>
-<a href="https://github.com/kolyvan/samizdat">Samizdat - Mac OS X utility for samlib.ru </a> </li>
-<li><a href="https://github.com/kolyvan/kxtools">A small collection of objective-c categories, classes and macros</a></li>
-<li>
-<a href="https://github.com/kolyvan/listok">Listok is a dialect of LISP (Scala-based)</a> </li>
-<li><a href="https://github.com/kolyvan/redis-scala">A Scala client library for the Redis key-value store</a></li>
-</ul><p><a href="mailto:ru.kolyvan@gmail.com">Email</a><br><a href="https://twitter.com/intent/tweet?screen_name=Kolyvan_Ru">Tweet to @Kolyvan_Ru</a>  </p>
-      </section>
-    </div>
+			$('#github-projects').append("\
+			<div>\
+  			<h3><a href='" + this.url + "'>" + this.name + "</a></h3>\
+  			<p>"+this.description+"</p>\
+			</div>");
+			};
+    });
+  });
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+</script>
 
-    
 
-  </body>
-</html>
+ 
