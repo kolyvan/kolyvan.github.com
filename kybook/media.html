@@ -2,14 +2,14 @@
 layout: kybook
 title: Media
 images:
-  - { file: sidebar_menu.png, title: Sidebar Menu }
+  - { file: sidebar_open.png, title: Sidebar Menu }
   - { file: bookshelf_covers.png, title: Bookshelf (Cover Flow) }
   
 ---
 
 <div class="hero-unit">
     <h1>Media</h1>    
-    <p class="lead">Look at screenshots and videos</p>   
+    <p class="lead">Look at images and videos</p>   
     <p>
     <a href="#">-</a>
     </p>
@@ -21,7 +21,7 @@ images:
     	
     	<div class="span10">
     
-		<h3 id="screenshots">Screenshots</h3>
+		<h3 id="images">Images</h3>
 
         <ul class="thumbnails">
 
@@ -29,8 +29,8 @@ images:
             
             <li class="span3">
             <div class="thumbnail"> 
-            <a href="{{ site.url }}/assets/kybook/images/{{ image.file }}" target="_blank" class="thumbnail">
-            <img src="{{ site.url }}/assets/kybook/thumbs/{{ image.file }}">
+            <a href="../assets/kybook/images/{{ image.file }}" target="_blank" class="thumbnail">
+            <img src="../assets/kybook/thumbs/{{ image.file }}">
             </a>
             <p>{{image.title}}</p>
             </div>
@@ -46,7 +46,7 @@ images:
 
 		<div class="span2">    
 		<ul class="nav nav-tabs nav-stacked">			
-			<li><a href="#screenshots">Screenshots</a></li>		
+			<li><a href="#images">Images</a></li>		
 			<li><a href="#videos">Videos</a></li>				
 		</ul>
     	</div>
