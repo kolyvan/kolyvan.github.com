@@ -1,20 +1,20 @@
 ---
 layout: kybook
 title: Media
-images:
-  - { file: sidebar_open.png, title: Sidebar Menu }
-  - { file: bookshelf_covers.png, title: Bookshelf (Covers) }
-  - { file: bookshelf_list.png, title: Bookshelf (List) }
-  - { file: bookshelf_stacks.png, title: Bookshelf (Stacks) }    
-  - { file: book_read.png, title: Book }
-  - { file: book_read_fullscreen.png, title: Book (fullscreen)}  
-  - { file: book_read_fullscreen_dark.png, title: Book (dark)}  
-  - { file: v120/bookshelf_retina.png, title: Main v1.2.0 }   
-  - { file: v120/sidebar_retina.png, title: Sidebar v1.2.0 }   
-  - { file: v120/recent_retina.png, title: Recent v1.2.0 }     
-  - { file: v120/bookshelf_ipad.png, title: Main iPad v1.2.0 }   
-  - { file: v120/sidebar_ipad.png, title: Sidebar iPad v1.2.0 }   
-  - { file: v120/recent_ipad.png, title: Recent iPad v1.2.0 }     
+images_iphone:
+  - { file: v198/iphone4_shelf.png, title: Bookshelf }
+  - { file: v198/iphone4_text1.png, title: Book }
+  - { file: v198/iphone4_text2.png, title: Book (Dark Theme) }
+  - { file: v198/iphone4_sidebar.png, title: Sidebar }
+  - { file: v198/iphone4_home.png, title: Home }
+
+images_ipad:
+  - { file: v198/ipad_shelf.png, title: Bookshelf }
+  - { file: v198/ipad_text1.png, title: Book }
+  - { file: v198/ipad_text2.png, title: Book (Dark Theme) }
+  - { file: v198/ipad_sidebar.png, title: Sidebar }
+  - { file: v198/ipad_home.png, title: Home }  
+  
   
 ---
 
@@ -33,11 +33,11 @@ images:
     	
     	<div class="span10">
     
-		<h3 id="images">Images</h3>
+		<h3 id="images">iPhone</h3>
 
         <ul class="thumbnails">
 
-        {% for image in page.images %}
+        {% for image in page.images_iphone %}
             
             <li class="span3">
             <div class="thumbnail"> 
@@ -52,6 +52,27 @@ images:
         {% endfor %}
             
         </ul>
+
+
+  <h3 id="images">iPad</h3>
+
+        <ul class="thumbnails">
+
+        {% for image in page.images_ipad %}
+            
+            <li class="span3">
+            <div class="thumbnail"> 
+            <!-- <a href="../assets/kybook/images/{{ image.file }}" target="_blank" class="thumbnail"> -->
+            <a href="#"  onclick="showModalImage('{{ image.file }}', '{{image.title}}');">
+            <img src="../assets/kybook/thumbs/{{ image.file }}">
+            </a>
+            <p>{{image.title}}</p>
+            </div>
+            </li>   
+
+        {% endfor %}
+            
+        </ul>        
 
     <h3>More Screens</h3>
     
