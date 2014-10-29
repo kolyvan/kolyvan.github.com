@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Find A Book">
+        <meta name="description" content="Найти книгу">
         
         <link href="/css/bootstrap.min.css" rel="stylesheet">
         <style>
@@ -28,35 +28,46 @@
                 <span class="icon-bar"></span>
                 </a>
             <!-- <a class="brand" href="#">{{ site.name }}</a> -->
-                <a class="brand" href="/findbook/index.html">Find A Book</a>
+                <a class="brand" href="/findbook/ru/index.html">Найти книгу</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">    
 
-                        {% if page.title == 'News' %}
-                        <li class="active"><a href="/findbook/news.html">News</a></li>
+                        {% if page.title == 'Новости' %}
+                        <li class="active"><a href="/findbook/ru/news.html">Новости</a></li>
                         {% else %}
-                        <li ><a href="/findbook/news.html">News</a></li>
+                        <li ><a href="/findbook/ru/news.html">Новости</a></li>
                         {% endif %}                    
                                                 
-                        {% if page.title == 'Support' %}
-                        <li class="active"><a href="/findbook/support.html">Support</a></li>              
+                        {% if page.title == 'Поддержка' %}
+                        <li class="active"><a href="/findbook/ru/support.html">Поддержка</a></li>              
                         {% else %}
-                        <li ><a href="/findbook/support.html">Support</a></li>              
-                        {% endif %}                        
+                        <li ><a href="/findbook/ru/support.html">Поддержка</a></li>              
+                        {% endif %}  
+                                           
                        
                     </ul>
 
                     <ul class="nav pull-right">
-                        {% if page.url == '/findbook/index.html' %}
-                        <li ><a href="/findbook/ru/index.html">RU</a></li>
-                        {% elsif page.url == '/findbook/news.html' %}
-                        <li ><a href="/findbook/ru/news.html">RU</a></li>
-                        {% elsif page.url == '/findbook/support.html' %}         
-                        <li ><a href="/findbook/ru/support.html">RU</a></li>              
+                        {% if page.url == '/findbook/ru/index.html' %}
+                        <li ><a href="/findbook/index.html">EN</a></li>
+                        {% elsif page.url == '/findbook/ru/news.html' %}
+                        <li ><a href="/findbook/news.html">EN</a></li>
+                        {% elsif page.url == '/findbook/ru/support.html' %}         
+                        <li ><a href="/findbook/support.html">EN</a></li>               
                         {% endif %} 
-                    </ul>
+                    </ul>                
 
                 </div>
+
+<!--
+                <div class="nav-collapse collapse">
+                <ul class="nav pull-right">
+                    <li ><a href="/findbook/index.html">EN</a></li>                      
+                </ul>                
+                </div>
+-->                                
+
+
             </div>
         </div>
     </div>
