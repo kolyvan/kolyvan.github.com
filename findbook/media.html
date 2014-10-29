@@ -1,0 +1,45 @@
+---
+layout: findbook
+title: Media
+images_iphone:
+  - { file: iphone5-sidebar.png, title: Sidebar }
+  - { file: iphone5-search.png, title: Search }
+  - { file: iphone5-detail.png, title: Detail }  
+  - { file: iphone5-loads.png, title: Downloads }    
+    
+---
+
+<div class="hero-unit">
+    <h1>Media</h1>       
+</div>
+
+<div class="container-fluid">    
+  <div class="row-fluid">        	
+  <div class="span10">
+    
+		<h3 id="images">iPhone</h3>
+
+    <ul class="thumbnails">
+
+      {% for image in page.images_iphone %}
+            
+        <li class="span3">
+
+        <a href="../assets/findbook/images/{{ image.file }}" target="_blank" class="thumbnail"> 
+        <img src="../assets/findbook/thumbs/{{ image.file }}">
+        </a>
+                
+        </li>   
+
+        {% endfor %}
+            
+    </ul>
+    
+    <!--     
+    <h3>More Screens</h3>
+		<h3 id="videos">Videos</h3>
+    -->
+ 
+  </div>
+  </div>
+</div>

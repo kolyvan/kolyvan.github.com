@@ -32,13 +32,19 @@
                 <div class="nav-collapse collapse">
                     <ul class="nav">    
 
-                        {% if page.title == 'Новости' %}
+                        {% if page.url == '/findbook/ru/news.html' %}
                         <li class="active"><a href="/findbook/ru/news.html">Новости</a></li>
                         {% else %}
                         <li ><a href="/findbook/ru/news.html">Новости</a></li>
-                        {% endif %}                    
+                        {% endif %}   
+
+                        {% if page.url == '/findbook/ru/media.html' %}
+                        <li class="active"><a href="/findbook/ru/media.html">Медиа</a></li>
+                        {% else %}
+                        <li ><a href="/findbook/ru/media.html">Медиа</a></li>              
+                        {% endif %}                 
                                                 
-                        {% if page.title == 'Поддержка' %}
+                        {% if page.url == '/findbook/support.html' %}
                         <li class="active"><a href="/findbook/ru/support.html">Поддержка</a></li>              
                         {% else %}
                         <li ><a href="/findbook/ru/support.html">Поддержка</a></li>              
@@ -52,6 +58,8 @@
                         <li ><a href="/findbook/index.html">EN</a></li>
                         {% elsif page.url == '/findbook/ru/news.html' %}
                         <li ><a href="/findbook/news.html">EN</a></li>
+                        {% elsif page.url == '/findbook/ru/media.html' %}
+                        <li ><a href="/findbook/media.html">EN</a></li>
                         {% elsif page.url == '/findbook/ru/support.html' %}         
                         <li ><a href="/findbook/support.html">EN</a></li>               
                         {% endif %} 
