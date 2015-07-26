@@ -1,23 +1,19 @@
 ---
 layout: kybook
 title: Beta
+images_beta:
+  - mainscreen.png
+  - mybooks.png
+  - readbook.png
+  - readconf.png
+  - readdark.png
 ---
 
 <div class="hero-unit">
 	<h1>Public beta-test</h1>
 	<p />
-    <p class="lead">KyBook 2 (Next Edition) is currently in Private Beta. If you would like to join the test group, please enter your email address and we will let you know when a spot becomes available.</p>	        
+    <p class="lead">KyBook 2 (Next Edition) is currently in Public Beta. If you would like to join the test group, please enter your email address and we will let you know when a spot becomes available.</p>	        
     <p> <a href="#disqus_thread">Leave a feedback</a> </p>
-</div>
-
-<div>
-
-<h3>Release Description</h3>
-
-<ul>
-	<li>Lots of changes.</li>	
-</ul>
-
 </div>
 
 <div>
@@ -27,6 +23,36 @@ title: Beta
 <iframe src="https://docs.google.com/forms/d/1gVB1DRGRNNMx08UN6bcjquqeG-4ueu3WxyZnr3wRA4s/viewform?embedded=true" width="760" height="600" frameborder="0" marginheight="0" marginwidth="0">Загрузка...
 </iframe>
 
+</div>
+
+<div>
+
+<h3>Release Description</h3>
+
+<div>The first public beta version of the KyBook new edition. This version is still unfinished and contains lots of errors and stubs for not yet implemented features. The release is intended for your familiarization with the new design of KyBook. Major innovations: new engines for epub/fb2 ebook formats. Heavily modified engines for pdf/djvu. A new way for cataloging books and cloud storages interaction.</div>
+
+<div class="container-fluid">    
+    <div class="row-fluid">    	
+    	<div class="span10">    
+		<br />
+        <ul class="thumbnails">
+
+        {% for image in page.images_beta %}
+            
+            <li class="span3">
+            <div class="thumbnail"> 
+            <a href="../assets/kybook/images/beta2/{{ image }}" target="_blank" class="thumbnail">
+            <img src="../assets/kybook/thumbs/beta2/{{ image }}">
+            </a>            
+            </div>
+            </li>   
+
+        {% endfor %}
+            
+        </ul>
+		</div>        
+    </div>
+</div>    
 </div>
 
 <div>
